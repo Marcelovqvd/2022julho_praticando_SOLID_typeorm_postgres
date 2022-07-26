@@ -1,8 +1,11 @@
-import { Router } from 'express';
-import { clientsRoutes } from './clients.routes';
+import { Router } from "express"
+import { clientsRoutes } from "./clients.routes"
 
-const router = Router();
+const router = Router()
 
-router.use('/clients', clientsRoutes);
+router.use("/clients", clientsRoutes)
 
-export { router };
+export { router }
+
+
+

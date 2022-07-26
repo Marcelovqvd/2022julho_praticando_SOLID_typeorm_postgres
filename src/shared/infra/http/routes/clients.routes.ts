@@ -1,7 +1,7 @@
-import { Router } from 'express';
+import { Router } from "express"
 
-const clientsRoutes = Router();
+const clientsRoutes = Router()
 
-clientsRoutes.post('/');
+clientsRoutes.post("/")
 
-export { clientsRoutes };
+export { clientsRoutes }
