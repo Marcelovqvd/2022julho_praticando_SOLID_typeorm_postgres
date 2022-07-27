@@ -1,5 +1,7 @@
 import express from "express";
 
+import "./container";
+
 import { router } from "./infra/http/routes/index";
 
 const app = express();

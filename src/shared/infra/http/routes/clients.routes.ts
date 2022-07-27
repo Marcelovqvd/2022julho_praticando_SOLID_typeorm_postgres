@@ -1,7 +1,11 @@
 import { Router } from "express";
 
+import { CreateClientController } from "../../../../modules/clients/useCases/createClient/CreateClienteController";
+
 const clientsRoutes = Router();
 
-clientsRoutes.post("/");
+const createClientController = new CreateClientController();
+
+clientsRoutes.post("/", createClientController.handle);
 
 export { clientsRoutes };
