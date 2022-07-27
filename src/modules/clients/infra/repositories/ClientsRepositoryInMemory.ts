@@ -17,6 +17,10 @@ class ClientsRepositoryInMemory implements IClientsRepository {
 
     return client;
   }
+
+  async list() {
+    return this.clients;
+  }
 }
 
 export { ClientsRepositoryInMemory };
