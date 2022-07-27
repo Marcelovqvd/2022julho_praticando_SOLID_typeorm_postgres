@@ -7,12 +7,12 @@ import { IClientsRepository } from "../../repositories/IClientsRepository";
 @injectable()
 class CreateClientUseCase {
   constructor(
-    @inject("ClientsRepositoryInMemory")
-    private clientsRepositoryInMemory: IClientsRepository
+    @inject("ClientsRepository")
+    private clientsRepository: IClientsRepository
   ) {}
 
   async execute({ name, cpf }: ICreateClientDTO): Promise<Client> {
-    const client = await this.clientsRepositoryInMemory.create({
+    const client = await this.clientsRepository.create({
       name,
       cpf,
     });

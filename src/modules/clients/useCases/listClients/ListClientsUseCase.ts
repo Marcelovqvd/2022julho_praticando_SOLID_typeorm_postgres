@@ -1,16 +1,16 @@
 import { inject, injectable } from "tsyringe";
 
-import { ClientsRepositoryInMemory } from "../../infra/repositories/ClientsRepositoryInMemory";
+import { ClientsRepository } from "../../infra/typeorm/repositories/ClientsRepository";
 
 @injectable()
 class ListclientsUseCase {
   constructor(
-    @inject("ClientsRepositoryInMemory")
-    private clienstRepositoryInMemory: ClientsRepositoryInMemory
+    @inject("ClientsRepository")
+    private clientsRepository: ClientsRepository
   ) {}
 
   async execute() {
-    const list = this.clienstRepositoryInMemory.list();
+    const list = this.clientsRepository.list();
     return list;
   }
 }

@@ -1,6 +1,6 @@
 import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
-import { IClientsRepository } from "../../repositories/IClientsRepository";
-import { Client } from "../typeorm/entities/Client";
+import { Client } from "../../infra/typeorm/entities/Client";
+import { IClientsRepository } from "../IClientsRepository";
 
 class ClientsRepositoryInMemory implements IClientsRepository {
   clients: Client[] = [];
