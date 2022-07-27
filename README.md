@@ -3,3 +3,6 @@
 ## Coneitos importantes
 - SOLID
 - Injeção de dependência
+- migrations
+- TypeORM
+- Postgres
