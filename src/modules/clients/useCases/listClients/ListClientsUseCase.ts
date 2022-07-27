@@ -1,6 +1,6 @@
 import { inject, injectable } from "tsyringe";
 
-import { ClientsRepository } from "../../infra/typeorm/repositories/ClientsRepository";
+import { ClientsRepository } from "@modules/clients/infra/typeorm/repositories/ClientsRepository";
 
 @injectable()
 class ListclientsUseCase {

@@ -1,5 +1,6 @@
-import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
-import { Client } from "../../infra/typeorm/entities/Client";
+import { ICreateClientDTO } from "@modules/clients/dtos/ICreateClientDTO";
+import { Client } from "@modules/clients/infra/typeorm/entities/Client";
+
 import { IClientsRepository } from "../IClientsRepository";
 
 class ClientsRepositoryInMemory implements IClientsRepository {

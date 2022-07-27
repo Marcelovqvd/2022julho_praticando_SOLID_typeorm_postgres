@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/shared/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn --poll src/shared/server.ts",
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli"
   },
   "dependencies": {
     "@types/node": "^18.6.1",

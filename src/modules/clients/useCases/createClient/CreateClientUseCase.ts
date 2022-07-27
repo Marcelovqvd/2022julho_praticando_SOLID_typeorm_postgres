@@ -1,8 +1,8 @@
 import { inject, injectable } from "tsyringe";
 
-import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
-import { Client } from "../../infra/typeorm/entities/Client";
-import { IClientsRepository } from "../../repositories/IClientsRepository";
+import { ICreateClientDTO } from "@modules/clients/dtos/ICreateClientDTO";
+import { Client } from "@modules/clients/infra/typeorm/entities/Client";
+import { IClientsRepository } from "@modules/clients/repositories/IClientsRepository";
 
 @injectable()
 class CreateClientUseCase {

@@ -1,7 +1,8 @@
 import { getRepository, Repository } from "typeorm";
 
-import { ICreateClientDTO } from "../../../dtos/ICreateClientDTO";
-import { IClientsRepository } from "../../../repositories/IClientsRepository";
+import { ICreateClientDTO } from "@modules/clients/dtos/ICreateClientDTO";
+import { IClientsRepository } from "@modules/clients/repositories/IClientsRepository";
+
 import { Client } from "../entities/Client";
 
 class ClientsRepository implements IClientsRepository {
