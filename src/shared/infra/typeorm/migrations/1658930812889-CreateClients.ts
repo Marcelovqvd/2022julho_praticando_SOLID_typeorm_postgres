@@ -18,7 +18,6 @@ export class CreateClients1658930812889 implements MigrationInterface {
           {
             name: "cpf",
             type: "numeric",
-            isPrimary: true,
           },
           {
             name: "created_at",
