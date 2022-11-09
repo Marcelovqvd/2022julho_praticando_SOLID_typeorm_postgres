@@ -8,10 +8,8 @@ class CreateClientController {
     const { name, cpf } = request.body;
 
     const createClientUseCase = container.resolve(CreateClientUseCase);
-    const client = await createClientUseCase.execute({
-      name,
-      cpf,
-    });
+
+    const client = await createClientUseCase.execute({ name, cpf });
 
     return response.status(201).json(client);
   }

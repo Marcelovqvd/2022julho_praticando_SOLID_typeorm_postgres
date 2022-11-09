@@ -1,9 +1,11 @@
 import { inject, injectable } from "tsyringe";
 
-import { ICreateClientDTO } from "@modules/clients/dtos/ICreateClientDTO";
-import { Client } from "@modules/clients/infra/typeorm/entities/Client";
 import { IClientsRepository } from "@modules/clients/repositories/IClientsRepository";
 
+interface IRequest {
+  name: string;
+  cpf: number;
+}
 @injectable()
 class CreateClientUseCase {
   constructor(
@@ -11,13 +13,11 @@ class CreateClientUseCase {
     private clientsRepository: IClientsRepository
   ) {}
 
-  async execute({ name, cpf }: ICreateClientDTO): Promise<Client> {
-    const client = await this.clientsRepository.create({
+  async execute({ name, cpf }: IRequest): Promise<void> {
+    await this.clientsRepository.create({
       name,
       cpf,
     });
-
-    return client;
   }
 }
 
